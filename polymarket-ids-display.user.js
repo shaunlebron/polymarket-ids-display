@@ -25,13 +25,11 @@
       const response = await origFetch(url, opts)
       if (method == "GET" && url.includes("/games.json")) {
         const json = await response.json();
-        console.log("json", json)
         for (const {slug,markets} of json.pageProps.dehydratedState.queries[1].state.data) {
           slugToCond[slug] = markets.map(e => e.conditionId).join(',')
         }
         response.json = async function() { return json }
         response.text = async function() { return JSON.stringify(json) }
-        console.log("SLUGS", slugToCond)
       }
       return response
     }
