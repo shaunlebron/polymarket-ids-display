@@ -6,8 +6,8 @@
 // @author      Shaun Williams
 // @version     1.0.0
 // @homepage    https://github.com/shaunlebron/polymarket-ids-display
-// @updateURL   https://github.com/shaunlebron/polymarket-ids-display/raw/master/polymarket-ids-display.user.js
-// @downloadURL https://github.com/shaunlebron/polymarket-ids-display/raw/master/polymarket-ids-display.user.js
+// @updateURL   https://raw.githubusercontent.com/shaunlebron/polymarket-ids-display/refs/heads/main/polymarket-ids-display.user.js
+// @downloadURL https://raw.githubusercontent.com/shaunlebron/polymarket-ids-display/refs/heads/main/polymarket-ids-display.user.js
 // @grant       none
 // @noframes
 // ==/UserScript==
