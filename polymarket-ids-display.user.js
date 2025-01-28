@@ -4,7 +4,7 @@
 // @description add market IDs to polymarket pages
 // @namespace   com.shaunlebron.mint.js
 // @author      Shaun Williams
-// @version     1.2.1
+// @version     1.3.0
 // @homepage    https://github.com/shaunlebron/polymarket-ids-display
 // @updateURL   https://raw.githubusercontent.com/shaunlebron/polymarket-ids-display/refs/heads/main/polymarket-ids-display.user.js
 // @downloadURL https://raw.githubusercontent.com/shaunlebron/polymarket-ids-display/refs/heads/main/polymarket-ids-display.user.js
@@ -113,15 +113,9 @@
   }
 
   function renderSports() {
-    // new styles cards (NBA, NFL)
-    for (const card of $$("[mode=desktop][id]")) {
-      const slug = card.id.match(/(.*)-item$/)?.[1]
-      if (slug) addIdsToCard(card, {slug, cond: slugToCond[slug]})
-    }
-
-    // old style cards (EBL)
-    for (const card of $$("[data-scroll-anchor^=event-detail-accordion-item-]")) {
-      const slug = card.dataset.scrollAnchor.match(/^event-detail-accordion-item-\d+-(.*-\d{4}-\d{2}-\d{2})/)?.[1]
+    // league overview
+    for (const card of $$("#event-detail-container ul li")) {
+      const slug = card.id
       if (slug) addIdsToCard(card, {slug, cond: slugToCond[slug]})
     }
 
